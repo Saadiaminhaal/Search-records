@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="fetching_btw_two_pricesModelStoreContainer" CdmEntityContainer="fetching_btw_two_pricesEntities">
+    <EntitySetMapping Name="Employeees">
+      <EntityTypeMapping TypeName="fetching_btw_two_pricesModel.Employeee">
+        <MappingFragment StoreEntitySet="Employeee">
+          <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="emp_details" FunctionName="fetching_btw_two_pricesModel.Store.emp_details">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="fetching_btw_two_pricesModel.emp_details_Result">
+          <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFunctionEmp" FunctionName="fetching_btw_two_pricesModel.Store.emp_details" />
+  </EntityContainerMapping>
+</Mapping>
